@@ -44,7 +44,6 @@ dependencies {
     implementation 'androidx.legacy:legacy-support-v4:1.0.0'
 
     //extension lib
-    implementation 'com.github.ibrahimsn98:CirclesLoadingView:1.0'
     implementation 'com.github.vivchar:ViewPagerIndicator:1.1.0'
     implementation 'com.github.captain-miao:optroundcardview:1.0.0'
     implementation 'com.intuit.sdp:sdp-android:1.0.6'

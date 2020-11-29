@@ -14,15 +14,4 @@
         android:src="@drawable/group_58"
         android:layout_width="170dp"
         android:layout_height="170dp" />
-    <me.ibrahimsn.lib.CirclesLoadingView
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        app:circleRadius="12dp"
-        app:circleMargin="12dp"
-        app:animDistance="15dp"
-        android:id="@+id/loader1"
-        app:animDuration="700"
-        app:animDelay="125"
-        app:animInterpolator="overshoot"
-        android:layout_below="@+id/dapur_background"/>
 </RelativeLayout>
