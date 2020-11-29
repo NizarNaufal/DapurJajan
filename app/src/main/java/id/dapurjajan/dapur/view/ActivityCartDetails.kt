@@ -11,7 +11,7 @@ class ActivityCartDetails : AppCompatActivity(){
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_cart)
-        val data = intent?.getParcelableExtra<ReservasiModels>("data")
+        val data = intent?.getParcelableExtra<ReservasiModels>("title")
 
         data?.image_reservasi?.let { image_pesanan?.setImageResource(it) }
         data?.reservasi_title?.let { text_title_rv?.setText(it) }
