@@ -3,10 +3,9 @@ package id.dapurjajan.dapur.view
 import android.os.Bundle
 import android.view.View
 import androidx.appcompat.app.AppCompatActivity
-import com.greenfrvr.rubberloader.RubberLoaderView
-import id.kelompokbeta.wisato.R
-import id.kelompokbeta.wisato.support.showActivity
-import id.kelompokbeta.wisato.view.intro.WelcomeSlider
+import id.dapurjajan.dapur.R
+import id.dapurjajan.dapur.service.showActivity
+import me.ibrahimsn.lib.CirclesLoadingView
 import java.util.*
 
 
@@ -14,13 +13,12 @@ class Root : AppCompatActivity() {
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_splash)
-        (findViewById<View>(R.id.loader1) as RubberLoaderView).startLoading()
+        (findViewById<View>(R.id.loader1) as CirclesLoadingView)
         val myTimer = Timer()
         myTimer.schedule(object : TimerTask() {
             override fun run() {
-                // If you want to modify a view in your Activity
                 runOnUiThread {
-                    showActivity(WelcomeSlider::class.java)
+                    showActivity(HomeActivity::class.java)
                 }
             }
         }, 500)

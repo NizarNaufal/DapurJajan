@@ -8,33 +8,21 @@
     android:layout_height="match_parent"
     tools:context=".view.Root">
     <ImageView
-        android:id="@+id/wisato_background"
+        android:id="@+id/dapur_background"
         android:layout_centerHorizontal="true"
         android:layout_centerVertical="true"
         android:src="@drawable/group_58"
         android:layout_width="170dp"
         android:layout_height="170dp" />
-    <TextView
-        android:layout_width="wrap_content"
-        android:layout_height="match_parent"
-        android:text="Wisato Purwokerto"
-        android:layout_below="@+id/wisato_background"
-        android:textColor="@color/white"
-        android:layout_centerHorizontal="true"/>
-    <com.greenfrvr.rubberloader.RubberLoaderView
-        android:layout_centerHorizontal="true"
-        android:layout_alignParentBottom="true"
-        android:id="@+id/loader1"
-        android:layout_width="wrap_content"
+    <me.ibrahimsn.lib.CirclesLoadingView
+        android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:layout_gravity="center"
-        app:loaderExtraColor="@color/fiftypercenttranparent"
-        app:loaderPrimeColor="@color/colorAccent"
-        app:loaderSize="tiny"
-        android:layout_weight="1"
-        app:loaderRippleColor="@color/colorAccent"
-        app:loaderRippleMode="cycle"/>
-
-
-
+        app:circleRadius="12dp"
+        app:circleMargin="12dp"
+        app:animDistance="15dp"
+        android:id="@+id/loader1"
+        app:animDuration="700"
+        app:animDelay="125"
+        app:animInterpolator="overshoot"
+        android:layout_below="@+id/dapur_background"/>
 </RelativeLayout>
