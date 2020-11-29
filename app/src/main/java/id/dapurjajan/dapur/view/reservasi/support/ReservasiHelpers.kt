@@ -1,22 +1,34 @@
-package id.kelompokbeta.wisato.view.coffee.support
+package id.dapurjajan.dapur.view.reservasi.support
 
-import id.dapurjajan.dapur.view.reservasi.support.ReservasiModels
-import id.kelompokbeta.wisato.R
+import id.dapurjajan.dapur.R
+
 
 class ReservasiHelpers{
     companion object {
         fun <ArrayList> getVersionsList(): ArrayList {
-            var androidVersionList = ArrayList<ReservasiModels>()
-            androidVersionList.add(
+            var reservasiList = ArrayList<ReservasiModels>()
+            reservasiList.add(
                 ReservasiModels(
-                    R.drawable.hangout_cafe_images,
+                    R.drawable.paket_hajatan_details,
                     "Hangout Cafe",
-                    "Cafe dengan suasane nyaman dan kekinian. Cocok untuk berkumpul dengan teman atau keluarga",
-                        "-7.676190",
-                        "109.663699"
+
                 )
             )
-            return androidVersionList as ArrayList
+            reservasiList.add(
+                ReservasiModels(
+                    R.drawable.paket_ulang_tahun,
+                    "Paket Ulang Tahun",
+
+                    )
+            )
+            reservasiList.add(
+                ReservasiModels(
+                    R.drawable.paket_hari_raya,
+                    "Paket Hari Raya",
+
+                    )
+            )
+            return reservasiList as ArrayList
         }
     }
 }

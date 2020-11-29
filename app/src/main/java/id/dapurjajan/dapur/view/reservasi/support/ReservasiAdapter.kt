@@ -10,14 +10,15 @@ import android.widget.TextView
 import androidx.recyclerview.widget.RecyclerView
 import com.google.android.material.card.MaterialCardView
 import id.dapurjajan.dapur.R
+import id.dapurjajan.dapur.view.reservasi.ActivityReservasiDetails
 
 class ReservasiAdapter(val context : Context, private val reservasiList: ArrayList<ReservasiModels>) : RecyclerView.Adapter<ReservasiAdapter.ViewHolder>() {
 
     override fun onBindViewHolder(p0: ViewHolder, p1: Int) {
-        p0.txtTitleReservasi?.text = reservasiList[p1].coffee_title
+        p0.txtTitleReservasi?.text = reservasiList[p1].reservasi_title
         p0.imageReservasi.setImageResource(reservasiList[p1].image_reservasi)
         p0.lytPosition.setOnClickListener { view1: View ->
-            val intent = Intent(view1.context, ActivityCoffeeDetails::class.java)
+            val intent = Intent(view1.context, ActivityReservasiDetails::class.java)
             intent.putExtra("data", reservasiList[p1])
             context.startActivity(intent)
         }
@@ -31,7 +32,7 @@ class ReservasiAdapter(val context : Context, private val reservasiList: ArrayLi
     }
 
     override fun getItemCount(): Int {
-        return androidVersionList.size
+        return reservasiList.size
     }
 
     class ViewHolder(itemView: View) : RecyclerView.ViewHolder(itemView) {

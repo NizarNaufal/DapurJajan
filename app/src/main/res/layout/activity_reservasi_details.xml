@@ -166,6 +166,7 @@
                 android:textColor="@color/black"/>
 
                 <RelativeLayout
+                    android:id="@+id/tambahkan_barang"
                     android:layout_width="@dimen/_130sdp"
                     android:layout_height="wrap_content"
                     android:layout_gravity="end"

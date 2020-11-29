@@ -1,0 +1,236 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:card_view="http://schemas.android.com/apk/res-auto"
+    xmlns:app="http://schemas.android.com/tools"
+    android:id="@+id/rootLayout"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="#E5E5E5"
+    android:orientation="vertical"
+    app:ignore="NamespaceTypo">
+
+    <LinearLayout
+        android:id="@+id/linearLayout2"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        card_view:layout_constraintEnd_toEndOf="parent"
+        card_view:layout_constraintStart_toStartOf="parent"
+        card_view:layout_constraintTop_toTopOf="parent">
+
+        <com.google.android.material.appbar.AppBarLayout
+            android:id="@+id/apptopbar"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+
+
+            <androidx.appcompat.widget.Toolbar
+                android:id="@+id/toolbar"
+                android:layout_width="match_parent"
+                android:layout_height="55dp"
+                android:layout_alignParentTop="true"
+                android:layout_weight="1"
+                android:background="@color/light_white"
+                app:contentInsetLeft="0dp"
+                app:contentInsetStart="0dp">
+
+                <FrameLayout
+                    android:id="@+id/header"
+                    android:layout_width="match_parent"
+                    android:layout_height="55dp"
+                    android:background="@color/white"
+                    android:elevation="5dp">
+
+                    <ImageView
+                        android:id="@+id/back_btn_ppob_gue"
+                        android:layout_width="20dp"
+                        android:layout_height="20dp"
+                        android:layout_gravity="center_vertical"
+                        android:layout_marginLeft="10dp"
+                        android:src="@drawable/biarrow_right"
+                        card_view:tint="@color/black" />
+
+                    <TextView
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:gravity="center"
+                        android:text="Riwayat Pesanan"
+                        android:textColor="@color/black"
+                        android:textSize="20dp" />
+                </FrameLayout>
+            </androidx.appcompat.widget.Toolbar>
+        </com.google.android.material.appbar.AppBarLayout>
+    </LinearLayout>
+
+    <androidx.core.widget.NestedScrollView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_marginTop="10dp"
+        android:paddingLeft="8dp"
+        android:paddingRight="8dp"
+        android:paddingBottom="10dp">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical">
+
+            <androidx.cardview.widget.CardView
+                android:id="@+id/card_view"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                card_view:cardBackgroundColor="#F2C94C"
+                card_view:cardCornerRadius="8dp"
+                card_view:cardUseCompatPadding="false"
+                card_view:elevation="15dp">
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="vertical"/>
+
+            </androidx.cardview.widget.CardView>
+
+            <androidx.cardview.widget.CardView
+                android:id="@+id/card_view_orders"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="10dp"
+                card_view:cardBackgroundColor="@color/white"
+                card_view:cardCornerRadius="8dp"
+                card_view:cardUseCompatPadding="false"
+                card_view:elevation="15dp">
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="vertical">
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:gravity="center"
+                        android:orientation="horizontal">
+
+                        <LinearLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_weight="1"
+                            android:orientation="vertical">
+
+                            <androidx.appcompat.widget.AppCompatTextView
+                                android:id="@+id/detail_orders"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:layout_marginLeft="10dp"
+                                android:layout_marginTop="10dp"
+                                android:layout_marginRight="10dp"
+                                android:layout_weight="1"
+                                android:drawablePadding="4dp"
+                                android:gravity="top"
+                                android:maxLines="1"
+                                android:textStyle="bold"
+                                android:text="Pesanan"
+                                android:textColor="@color/black"
+                                android:textSize="17dp" />
+                            <androidx.appcompat.widget.AppCompatTextView
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:layout_marginLeft="10dp"
+                                android:layout_marginTop="-20dp"
+                                android:layout_marginRight="10dp"
+                                android:layout_weight="1"
+                                android:drawablePadding="4dp"
+                                android:gravity="top"
+                                android:layout_gravity="end"
+                                android:maxLines="1"
+                                android:drawableRight="@drawable/ic_arrow_right"
+                                android:drawableTint="@color/black"
+                                android:text="Detail"
+                                android:textColor="@color/black"
+                                android:textSize="17dp" />
+                            <androidx.cardview.widget.CardView
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                app:cardCornerRadius="12dp"
+                                card_view:cardBackgroundColor="@color/white"
+                                app:cardElevation="5dp"
+                                android:layout_margin="10dp">
+                                <ImageView
+                                    android:id = "@+id/image_pesanan"
+                                    android:layout_width = "120dp"
+                                    android:layout_height = "@dimen/_50sdp"
+                                    android:layout_centerVertical="true"
+                                    android:layout_alignParentEnd="true"
+                                    android:src="@drawable/paket_hajatan_details"
+                                    android:layout_alignParentRight="true" />
+                            </androidx.cardview.widget.CardView>
+                            <RelativeLayout
+                                android:layout_width = "@dimen/_190sdp"
+                                android:layout_height = "wrap_content"
+                                android:layout_gravity="end"
+                                android:layout_marginTop="-80dp"
+                                android:layout_marginRight="@dimen/_10sdp"
+                                android:padding = "10dp">
+
+                                <androidx.appcompat.widget.AppCompatTextView
+                                    android:id = "@+id/text_title_rv"
+                                    android:layout_width = "match_parent"
+                                    android:layout_height = "wrap_content"
+                                    android:ellipsize = "end"
+                                    android:maxLines = "2"
+                                    android:paddingStart="6dp"
+                                    android:paddingEnd="6dp"                                    android:textColor = "@color/black"
+                                    android:textSize = "16sp"
+                                    android:text  = "Paket Hajatan" />
+
+                                <androidx.appcompat.widget.AppCompatTextView
+                                    android:id="@+id/text_point_rv"
+                                    android:layout_width="match_parent"
+                                    android:layout_height="match_parent"
+                                    android:layout_below="@id/text_title_rv"
+                                    android:layout_marginTop="10dp"
+                                    android:paddingStart="6dp"
+                                    android:paddingEnd="6dp"
+                                    android:textColor="@color/black"
+                                    android:text="Jumlah pesanan : 1" />
+                                <androidx.appcompat.widget.AppCompatTextView
+                                    android:id="@+id/text_point_rv_2"
+                                    android:layout_width="match_parent"
+                                    android:layout_height="match_parent"
+                                    android:layout_below="@id/text_point_rv"
+                                    android:layout_marginTop="10dp"
+                                    android:paddingStart="6dp"
+                                    android:paddingEnd="6dp"
+                                    android:textColor="@color/black"
+                                    android:text="Total pembayaran : Rp. 162,000 " />
+
+                            </RelativeLayout>
+                            <androidx.appcompat.widget.AppCompatButton
+                                android:id="@+id/submit"
+                                android:layout_width="@dimen/_150sdp"
+                                android:layout_height="36dp"
+                                android:layout_gravity="center"
+                                android:layout_marginTop="@dimen/_10sdp"
+                                android:layout_marginRight="@dimen/_10sdp"
+                                android:background="@drawable/rounded"
+                                android:backgroundTint="#FFC942"
+                                android:padding="@dimen/_3sdp"
+                                android:layout_marginBottom="@dimen/_10sdp"
+                                android:text="Diproses"
+                                android:textAllCaps="false"
+                                android:textColor="@color/white"
+                                android:textSize="@dimen/_8sdp" />
+                        </LinearLayout>
+
+
+                    </LinearLayout>
+
+                </LinearLayout>
+
+            </androidx.cardview.widget.CardView>
+
+        </LinearLayout>
+    </androidx.core.widget.NestedScrollView>
+</LinearLayout>

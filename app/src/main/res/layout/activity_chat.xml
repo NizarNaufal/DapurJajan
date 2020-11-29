@@ -1,0 +1,156 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/chatting"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/white"
+    android:clickable="true">
+
+    <com.github.captain_miao.optroundcardview.OptRoundCardView
+        android:id="@+id/detailCard"
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/_70sdp"
+        app:optRoundCardCornerRadius="@dimen/_30sdp"
+        app:optRoundCardLeftBottomCorner="true"
+        app:optRoundCardRightBottomCorner="true"
+        app:optRoundCardLeftTopCorner="false"
+        app:optRoundCardBackgroundColor="#FFC942"
+        app:optRoundCardRightTopCorner="false"
+        app:optRoundCardBottomEdges="false">
+        <ImageView
+            android:id="@+id/back_btn_ppob_gue"
+            android:layout_width="20dp"
+            android:layout_height="20dp"
+            android:layout_marginLeft="10dp"
+            android:layout_marginTop="@dimen/_15sdp"
+            android:src="@drawable/biarrow_right"
+            app:tint="@color/black" />
+        <TextView
+            android:id="@+id/tvNameProduct"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:ellipsize="end"
+            android:text="Chat"
+            android:layout_gravity="center"
+            android:layout_marginTop="-10dp"
+            android:fontFamily="@font/noto_sans"
+            android:textColor="@color/black"
+            android:textSize="@dimen/_20sdp"
+            android:textStyle="bold" />
+    </com.github.captain_miao.optroundcardview.OptRoundCardView>
+
+    <RelativeLayout
+        android:id="@+id/chat_layout"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_below="@id/detailCard"
+        android:background="@drawable/background_chat">
+        <LinearLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:layout_alignParentBottom="true"
+            android:background="@drawable/grouping_chat"
+            android:layout_marginBottom="@dimen/_65sdp"
+            android:orientation="vertical">
+
+            <androidx.appcompat.widget.AppCompatTextView
+                android:id="@+id/logistic_info"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="50dp"
+                android:layout_marginTop="10dp"
+                android:layout_marginRight="10dp"
+                android:layout_weight="1"
+                android:drawablePadding="4dp"
+                android:gravity="top"
+                android:maxLines="1"
+                android:text="Selamat datang di dapur jajan, ada yang bisa dibantu?"
+                android:textColor="#655241"
+                android:textSize="15dp" />
+
+
+            <androidx.appcompat.widget.AppCompatTextView
+                android:id="@+id/shippingtv_ppob"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="50dp"
+                android:layout_marginTop="@dimen/_10sdp"
+                android:layout_marginRight="10dp"
+                android:layout_marginBottom="10dp"
+                android:gravity="top"
+                android:visibility="invisible"
+                android:inputType="textMultiLine"
+                android:maxLines="10"
+                android:singleLine="false"
+                android:text="Jl. Perintis No. 24"
+                android:textColor="@color/black"
+                android:textSize="12dp" />
+        </LinearLayout>
+
+
+        <ProgressBar
+            android:id="@+id/progress_bar"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerInParent="true" />
+
+
+        <androidx.cardview.widget.CardView
+            android:id="@+id/writechatlayout"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_alignParentBottom="true"
+            android:layout_marginLeft="10dp"
+            android:layout_marginRight="70dp"
+            android:layout_marginBottom="10dp"
+            android:orientation="vertical"
+            app:cardBackgroundColor="@color/white"
+            app:cardCornerRadius="10dp">
+
+            <EditText
+                android:id="@+id/msgedittext"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_centerVertical="true"
+                android:layout_marginRight="40dp"
+                android:layout_marginLeft="@dimen/_15sdp"
+                android:background="@color/transparent"
+                android:fontFamily="@font/neosanspro_medium"
+                android:hint="Send Message Here"
+                android:paddingTop="15dp"
+                android:paddingBottom="15dp"
+                android:textColor="@color/black"
+                android:textColorHint="@color/gray"
+                android:textSize="16dp" />
+
+
+        </androidx.cardview.widget.CardView>
+
+        <ImageView
+            android:id="@+id/imagemic"
+            android:layout_width="50dp"
+            android:layout_height="50dp"
+            android:layout_alignParentRight="true"
+            android:layout_alignParentBottom="true"
+            android:layout_gravity="right"
+            android:layout_marginRight="10dp"
+            android:layout_marginBottom="10dp"
+            android:background="@drawable/btn_rect"
+            android:backgroundTint="#FFC942"/>
+
+        <ImageButton
+            android:id="@+id/sendbtn"
+            android:layout_width="30dp"
+            android:layout_height="30dp"
+            android:layout_alignParentRight="true"
+            android:layout_alignParentBottom="true"
+            android:layout_gravity="right"
+            android:layout_marginRight="20dp"
+            android:layout_marginBottom="20dp"
+            android:background="@drawable/ic_send" />
+
+    </RelativeLayout>
+</RelativeLayout>

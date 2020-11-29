@@ -6,5 +6,5 @@ import kotlinx.android.parcel.Parcelize
 @Parcelize
 data class ReservasiModels(
     val image_reservasi: Int,
-    val coffee_title: String,
+    val reservasi_title: String,
 ) : Parcelable
