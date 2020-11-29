@@ -209,7 +209,6 @@
                                     android:fontFamily="@font/neosanspro_medium"
                                     android:paddingRight="10dp"
                                     android:textColor="@color/black"
-                                    android:background="@color/light_gray"
                                     android:textSize="15dp" />
                                 <androidx.appcompat.widget.AppCompatTextView
                                     android:id="@+id/add_quantity_checkout"
@@ -453,7 +452,7 @@
 
 
                             <ImageView
-                                android:id="@+id/back_btn"
+                                android:id="@+id/btn_voucher"
                                 android:layout_width="20dp"
                                 android:layout_height="20dp"
                                 android:layout_gravity="end"

@@ -70,7 +70,7 @@
                     android:orientation="vertical">
 
                     <androidx.recyclerview.widget.RecyclerView
-                        android:id="@+id/rvCartFood_cart"
+                        android:id="@+id/rvReservasi"
                         style="@style/RecycleView"
                         android:paddingTop="@dimen/_10sdp" />
 

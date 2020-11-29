@@ -19,11 +19,17 @@ class ActivityReservasiDetails : AppCompatActivity(){
         val data = intent?.getParcelableExtra<ReservasiModels>("data")
         title_details?.text = data?.reservasi_title
         data?.image_reservasi?.let { image_coupon_details?.setImageResource(it) }
+        checkin_edits?.setOnClickListener {
+            datePicker()
+        }
         tambahkan_barang?.setOnClickListener {
             val i = Intent(this, ActivityCartDetails::class.java)
             i.putExtra("title", data)
             startActivity(i)
             showToast("Barang Berhasil Di tambahkan")
         }
+    }
+    private fun datePicker(){
+
     }
 }
