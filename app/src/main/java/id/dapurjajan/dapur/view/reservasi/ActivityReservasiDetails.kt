@@ -2,6 +2,7 @@ package id.dapurjajan.dapur.view.reservasi
 
 import android.content.Intent
 import android.os.Bundle
+import android.view.Window
 import androidx.appcompat.app.AppCompatActivity
 import com.google.android.material.datepicker.MaterialDatePicker
 import id.dapurjajan.dapur.R
@@ -17,7 +18,6 @@ class ActivityReservasiDetails : AppCompatActivity(){
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_reservasi_details)
         initView()
-        initToolbar()
     }
     private fun initView(){
         val data = intent?.getParcelableExtra<ReservasiModels>("data")
@@ -54,8 +54,5 @@ class ActivityReservasiDetails : AppCompatActivity(){
         }
 
         picker.show(supportFragmentManager, picker.toString())
-    }
-    private fun initToolbar(){
-
     }
 }
