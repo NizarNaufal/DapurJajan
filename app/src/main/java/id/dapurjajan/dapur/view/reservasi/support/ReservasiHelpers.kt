@@ -10,7 +10,7 @@ class ReservasiHelpers{
             reservasiList.add(
                 ReservasiModels(
                     R.drawable.paket_hajatan_details,
-                    "Hangout Cafe",
+                    "Paket Hajatan",
 
                 )
             )

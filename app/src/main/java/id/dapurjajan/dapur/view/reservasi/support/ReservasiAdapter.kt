@@ -7,6 +7,7 @@ import android.view.View
 import android.view.ViewGroup
 import android.widget.ImageView
 import android.widget.TextView
+import androidx.cardview.widget.CardView
 import androidx.recyclerview.widget.RecyclerView
 import com.google.android.material.card.MaterialCardView
 import id.dapurjajan.dapur.R
@@ -37,7 +38,7 @@ class ReservasiAdapter(val context : Context, private val reservasiList: ArrayLi
 
     class ViewHolder(itemView: View) : RecyclerView.ViewHolder(itemView) {
         val txtTitleReservasi = itemView.findViewById<TextView>(R.id.sudah_jajan_belum)
-        val lytPosition = itemView.findViewById<MaterialCardView>(R.id.material_reservasi)
+        val lytPosition = itemView.findViewById<CardView>(R.id.material_reservasi)
         val imageReservasi = itemView.findViewById<ImageView>(R.id.image_content_reservasi)
     }
 }

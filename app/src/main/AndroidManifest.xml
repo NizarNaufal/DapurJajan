@@ -32,7 +32,7 @@
             android:theme="@style/AppTheme.NoActionBar"/>
         <activity
             android:name=".view.reservasi.ActivityReservasiDetails"
-            android:theme="@style/AppTheme.NoActionBar"/>
+            android:theme="@style/AppThemeDate"/>
         <activity
             android:name=".view.ActivityCartDetails"
             android:theme="@style/AppTheme.NoActionBar"/>
